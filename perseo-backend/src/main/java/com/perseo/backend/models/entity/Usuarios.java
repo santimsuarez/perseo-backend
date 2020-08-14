@@ -44,7 +44,7 @@ public class Usuarios implements Serializable {
 	@NotEmpty(message = "No puede estar vacío")
 	private String apellido;
 	
-	@Column(nullable = false)
+	@Column(nullable = false)//comentario prueba
 	@NotEmpty(message = "No puede estar vacío")
 	private String sexo;
 	
