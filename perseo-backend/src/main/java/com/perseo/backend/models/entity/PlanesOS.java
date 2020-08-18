@@ -8,6 +8,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
+//@Table(name="planes_os")
 public class PlanesOS implements Serializable{
 
 	private static final long serialVersionUID = 1L;

@@ -152,5 +152,6 @@ public class Pacientes extends Usuarios{
 	public void setTelefonoContacto(Long telefonoContacto) {
 		this.telefonoContacto = telefonoContacto;
 	}
-
+	
+	
 }

@@ -32,6 +32,9 @@ public class Usuarios implements Serializable {
 	
 	private Long cuil;
 	
+	@Column(length = 60)
+	private String password;
+	
 	@Column(name="fecha_creacion")
 	@Temporal(TemporalType.TIME)
 	private Date fechaCreacion;
@@ -55,7 +58,7 @@ public class Usuarios implements Serializable {
 	@NotEmpty(message = "No puede estar vacío")
 	private Long telefonoCel;
 	
-	@Column(nullable = false)
+	@Column(nullable = false, unique= true)
 	@NotEmpty(message = "No puede estar vacío")
 	@Email(message = "no es un formato de Email válido.")
 	private String email;
@@ -99,7 +102,8 @@ public class Usuarios implements Serializable {
 	public void setCuil(Long cuil) {
 		this.cuil = cuil;
 	}
-
+	
+	
 	/*public Date getFechaCreacion() {
 		return fechaCreacion;
 	}
@@ -109,6 +113,14 @@ public class Usuarios implements Serializable {
 		
 	}*/
 	
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
 	@PrePersist
 	public void prePersist() {
 			fechaCreacion = new Date();
